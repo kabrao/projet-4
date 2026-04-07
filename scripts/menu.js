@@ -1,4 +1,5 @@
 import {listMenu} from '../data/menuList.js'
+import {panier} from '../data/cart.js'
 
 let menuProduit = '';
 
@@ -8,8 +9,8 @@ listMenu.forEach((produit) => {
         <img src="${produit.image}" >caffeMug
         <p class="cardName">${produit.name}</p>
         <div class="cardBottom">
-            <p class="cardPrice">$${(produit.price) / 100}</p>
-            <button class="cardBtn">🛒</button>
+            <p class="cardPrice">$${((produit.price) / 100).toFixed(2)}</p>
+            <button class="cardBtn" data-produit-nom= "${produit.name}">🛒</button>
         </div>
     </div>`;
 
@@ -18,4 +19,10 @@ listMenu.forEach((produit) => {
     document.querySelector('.menuHolder').innerHTML = menuProduit; 
 
 })
-console.log()
+document.querySelectorAll('.cardBtn')
+    .forEach((btn) =>{
+        btn.addEventListener('click', () => {
+            panier.push({ name : `${btn.dataset.produitNom}` });
+        });
+    })
+
