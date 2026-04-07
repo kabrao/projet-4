@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+let file = "test.txt"
+
+fetch (file)
+.then(x => x.text())
+.then(y => document.getElementById("demo").innerHTML = y);
+</script>
+    
+</body>
+</html>

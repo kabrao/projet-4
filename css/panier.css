@@ -1,0 +1,77 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+.troisLine{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 60px;
+    top: 32px;
+    
+}
+h1{
+    color: rgb(49, 49, 49);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 80px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 110px;
+    margin-bottom: 0;
+}
+h1:hover{
+    cursor: pointer;
+}
+.buttonDiv{
+    display: inline;
+    margin-top: 60px;
+    margin-right: 80px;
+    float: right;
+    
+    
+}
+.panier:hover{
+    cursor: pointer;
+
+}
+
+.panier{
+    background-color: rgb(255, 199, 44);
+    color: rgb(72, 72, 72);
+    border: 0;
+    border-radius: 3px;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    width: 200px;
+    font-weight: bold;
+    box-shadow: 0px 5px 20px rgba(255, 192, 20, 0.65);;
+    font-size: 20px;
+}
+.produit{
+    background-color: rgb(243, 236, 236);
+    color: rgb(72, 72, 72);
+    border-color: rgba(139, 139, 139, 0.158);
+    border-width: 1px;
+    border-radius: 3px;
+    border-left-width: 0px;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    width: 200px;    
+    font-weight: bold;
+    font-size: 20px;
+}
+.produit:hover{
+    cursor: pointer;
+
+}
+.paroduit:active{
+    border-color: white;
+}
+
+hr{
+    padding: 0;
+    margin: 0;
+}
