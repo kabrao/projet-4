@@ -1,7 +1,7 @@
 html, body {
+    background-color: rgb(53, 53, 53);
     padding: 0;
     margin: 0;
-    background-color: white;
 }
 
 nav {
@@ -14,7 +14,7 @@ nav {
 }
 
 h1 {
-    color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: clamp(50px, 10vw, 80px);
     margin: 0;
@@ -77,7 +77,7 @@ hr {
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(220, 220, 220);
     border-radius: 16px;
     padding: 16px;
     width: 180px;
@@ -94,10 +94,11 @@ hr {
 }
 
 .cardName {
+    display: inline;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     color: rgb(72, 72, 72);
-    margin: 12px 0 6px 0;
+    margin-left: 5px;
 }
 
 .cardPrice {
@@ -131,4 +132,18 @@ hr {
 .cardBtn:hover {
     background-color: rgb(255, 199, 44);
     border-color: rgb(255, 199, 44);
+}
+.produitQuantite{
+    float: inline-end;
+}
+
+option, select{
+    border: 0;
+}
+.cardCentre{
+    margin: 10px 0px 20px 0px ;
+}
+.panierNum{
+    color: red;
+
 }
