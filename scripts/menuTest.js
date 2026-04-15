@@ -1,9 +1,10 @@
 import {menuItems, categoryList} from '../data/menudata.js'
 import {panierItems} from '../data/panier.js'
-import {updatePanier} from './panier.js'
+import {updatePanier, panierVide,calculeFrais} from './panier.js'
 
 let menuProduit = '';
 let menuCategoryItem = '';
+panierVide();
 
 function itemWrite (item){
     
@@ -12,7 +13,7 @@ function itemWrite (item){
     if (item == produit.category){
         
         let itemForm = `
-                    <p class="itemName">${produit.name} ${((produit.price)/100).toFixed(2)}$</p>
+                    <p class="itemName">${produit.name} ${((produit.prix)/100).toFixed(2)}$</p>
                     
                     <div class="produitQuantite">
                         <select class="optionValeur optionValeur${produit.id}">
@@ -35,6 +36,7 @@ function itemWrite (item){
         }})
         return menuCategoryItem;
 }
+
 
 
 categoryList.forEach((item)=> {
@@ -67,12 +69,13 @@ document.querySelectorAll('.add')
                     panierItems.push({
                         id: produit.id,
                         name: produit.name,
-                        price: produit.price,
+                        prix: produit.prix,
                         quantite: quantite,
                     });
                 }
             }
 
             updatePanier();
+            calculeFrais();
         });
     })
