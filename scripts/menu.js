@@ -53,13 +53,16 @@ categoryList.forEach((item)=> {
 });
 
 document.querySelector('.categoryHolder').innerHTML = menuProduit; 
-document.querySelectorAll('.add')
-    .forEach((btn)=>{
+document.querySelectorAll('.add').forEach((btn)=>{
         btn.addEventListener('click', () => {
+
             let id = Number(btn.dataset.produitId);
             let quantite = Number(document.querySelector(".optionValeur" + id).value);
 
             let existItem = panierItems.find(item => item.id == id);
+
+            let select = document.querySelector(".optionValeur"+id);
+            select.value = "1";
 
             if (existItem) {
                 existItem.quantite += quantite;

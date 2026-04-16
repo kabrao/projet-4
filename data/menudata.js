@@ -13,5 +13,15 @@ export const menuItems = [{
     category : "SALADES",
     name : 'Salade',
     prix : 899
+},{
+    id : 4,
+    category : 'DRINKS',
+    name : 'Soda',
+    prix : 300
+},{
+    id : 5,
+    category : 'DRINKS',
+    name : 'Smoothie',
+    prix : 600
 }];
-export const categoryList = ["REPAS",'SALADES'];
+export const categoryList = ["REPAS",'SALADES','DRINKS'];

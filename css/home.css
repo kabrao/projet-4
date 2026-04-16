@@ -9,11 +9,16 @@ h1{
 p{
     margin: 0;
 }
-.menu{
-    display: inline-block;
-    width: 400px;
-    margin-left: 80px;
+.gridMP{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
 }
+.menu, .panier{
+    display: grid;
+    justify-content: center;
+}
+
 .categoryName{
     margin-bottom: 30px;
     font-size: 30px;
@@ -51,12 +56,6 @@ p{
     background-color: rgb(50, 50, 50);
     color: white;
     border: 0;
-}
-.panier{
-    display: inline-block;
-    width: 300px;
-    float: right;
-    margin-right: 80px;
 }
 
 .panierItems, .catProduit{
