@@ -3,8 +3,13 @@
 <head>
     <title>test</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
+    <div class="barreNav">
+        <button class="boutonNav decoB" id="btnLogout">[ DÉCONNEXION ]</button>
+    </div>
+
     <div class="gridMP">
         <div>
             <div class="menu">
@@ -32,9 +37,16 @@
                 </div>
                 
                 <p class="line5">--------------------------------------------------------</p>
-                <p class="total">TOTAL : 0.00$</p>
+                <div class="totalRow">
+                    <p class="total">TOTAL : 0.00$</p>
+                    <div class="creneauSelects">
+                        <select id="selectJour" class="creneauSelect"></select>
+                        <select id="selectCreneau" class="creneauSelect"></select>
+                    </div>
+                </div>
                 <p class="line6">--------------------------------------------------------</p>
-                <button class="commander">[COMMANDER]</button>
+                <button class="commander" id="btnCommander">[COMMANDER]</button>
+                <button class="commander" id="btnMesCommandes">[MES COMMANDES]</button>
 
 
             </div>
@@ -42,6 +54,16 @@
     </div>
     
 </div>
+<div id="modalPaiement" class="modalOverlay" style="display:none">
+    <div class="modalBox">
+        <h2 class="modalTitre">PAIEMENT</h2>
+        <div id="resumePaiement"></div>
+        <hr>
+        <button class="boutonAjout" id="btnConfirmerPaiement">[ CONFIRMER LE PAIEMENT ]</button>
+        <button class="boutonAjout" id="btnAnnulerPaiement" style="margin-left:20px">[ ANNULER ]</button>
+    </div>
+</div>
+
 <script src="scripts/menu.js" type="module"></script>
 </body>
 </html>

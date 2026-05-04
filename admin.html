@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="pageAdmin">
+
+    <div class="barreNav">
+        <button class="boutonNav actif" data-tab="produits">[ PRODUITS ]</button>
+        <button class="boutonNav" data-tab="categories">[ CATÉGORIES ]</button>
+        <button class="boutonNav" data-tab="utilisateurs">[ UTILISATEURS ]</button>
+        <button class="boutonNav" data-tab="commandes">[ COMMANDES ]</button>
+        <button class="boutonNav" data-tab="ventes">[ VENTES ]</button>
+        <button class="boutonNav decoB" id="btnLogout">[ DÉCONNEXION ]</button>
+    </div>
+
+        <hr>
+
+    <div class="sectionOnglet" id="tab-produits">
+        <h1>PRODUITS</h1>
+
+        <div class="zoneAjout">
+            <p class="titreAjout">----- AJOUTER UN PRODUIT -----</p>
+            <input type="text" id="prodNom" class="inputT" placeholder="Nom">
+            <input type="text" id="prodDesc" class="inputT" placeholder="Description">
+            <input type="number" id="prodPrix" class="inputT" placeholder="Prix" step="0.01">
+            <select id="prodCat" class="inputT"></select>
+            <button class="boutonAjout" id="btnAjouterProduit">[ AJOUTER ]</button>
+        </div>
+
+        <hr>
+
+        <div class="titreGrille">
+            <span>Nom</span>
+            <span>Prix</span>
+            <span>Disponible</span>
+            <span>Action</span>
+        </div>
+        <hr>
+        <div id="listeProduits">Chargement...</div>
+    </div>
+
+    <div class="sectionOnglet" id="tab-categories" style="display:none">
+        <h1>CATÉGORIES</h1>
+
+        <div class="zoneAjout">
+            <p class="titreAjout">----- AJOUTER UNE CATÉGORIE -----</p>
+            <input type="text" id="catNom" class="inputT" placeholder="Nom de la catégorie">
+            <button class="boutonAjout" id="btnAjouterCat">[ AJOUTER ]</button>
+        </div>
+
+        <hr>
+
+        <div id="listeCategories">Chargement...</div>
+    </div>
+
+    <div class="sectionOnglet" id="tab-utilisateurs" style="display:none">
+        <h1>UTILISATEURS</h1>
+        <hr>
+        <div class="titreGrille">
+            <span>Nom</span>
+            <span>Email</span>
+            <span>Rôle</span>
+            <span>Date</span>
+        </div>
+        <hr>
+        <div id="listeUtilisateurs">Chargement...</div>
+    </div>
+
+    <div class="sectionOnglet" id="tab-commandes" style="display:none">
+        <h1>COMMANDES</h1>
+        <hr>
+        <div class="titreGrille">
+            <span>#</span>
+            <span>Client</span>
+            <span>Total</span>
+            <span>Statut</span>
+        </div>
+        <hr>
+
+        <div id="listeCommandes">Chargement...</div>
+        <hr>
+    </div>
+
+    <div class="sectionOnglet" id="tab-ventes" style="display:none">
+        <h1>VENTES</h1>
+        <hr>
+        <div id="statsVentes">Chargement...</div>
+        <br>
+        <h2 class="titreSection">PAR PRODUIT</h2>
+        <hr>
+        <div class="titreGrille5" style="grid-template-columns: 1fr 120px 120px">
+            <span>Produit</span>
+            <span>Qté vendue</span>
+            <span>Revenus</span>
+        </div>
+        <hr>
+        <div id="ventesProduits">Chargement...</div>
+    </div>
+
+</div>
+
+<script src="./scripts/admin.js" type="module"></script>
+</body>
+</html>
